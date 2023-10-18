@@ -26,7 +26,6 @@ RUN apt-get install -y bash \
     libcanberra-gtk* \
     libgl1-mesa-dri \
     libgl1-mesa-glx \
-    libpangox-1.0-0 \
     libpulse0 \
     libv4l-0 \
     fonts-symbola
