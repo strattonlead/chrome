@@ -34,4 +34,4 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 RUN apt-get update && apt-get -y install google-chrome-stable
 
 ENTRYPOINT [ "google-chrome" ]
-CMD [ "--user-data-dir=/data" ]
+CMD [ "--no-sandbox" ]
