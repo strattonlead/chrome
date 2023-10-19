@@ -35,4 +35,4 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 RUN apt-get update && apt-get -y install google-chrome-stable
 
 ENTRYPOINT [ "google-chrome" ]
-CMD [ "--no-sandbox" ]
+CMD [ "--no-sandbox", "--no-first-run", "--kiosk-printing", "-kiosk", "https://createif-labs.de" ]
