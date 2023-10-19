@@ -29,7 +29,7 @@ RUN apt-get install -y bash \
     libpulse0 \
     libv4l-0 \
     xvfb \
-    xmodmap \
+    x11-xserver-utils \
     fonts-symbola
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \ 
     && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
