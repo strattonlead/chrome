@@ -29,7 +29,12 @@ RUN apt-get install -y bash \
     libpulse0 \
     libv4l-0 \
     xvfb \
-    fonts-symbola
+    fonts-symbola \
+    dbus \
+    dbus-x11
+
+ENV DBUS_SESSION_BUS_ADDRESS autolaunch:
+    
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \ 
     && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
 RUN apt-get update && apt-get -y install google-chrome-stable
